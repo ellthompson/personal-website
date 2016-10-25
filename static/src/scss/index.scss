@@ -1,0 +1,55 @@
+@import 'typography';
+@import 'buttons';
+
+$off-black: #383838;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.button__pill {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.54);
+  color: $off-black;
+  box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.54);
+  border-radius: 100px;
+  margin: 0 15px 0 15px;
+  min-width: 85px;
+  text-align: center;
+  transition: box-shadow 300ms, background-color 300ms, color 300ms;
+  user-select: none;
+  text-decoration: inherit;
+}
+
+.button__pill:hover {
+  background-color: rgba(90,90,90,0.54);
+  box-shadow: 0px 0px 3px 3px rgba(90,90,90,0.54);
+  color: rgba(255,255,255,0.54);
+  cursor: pointer;
+}
+
+.button__pill:active {
+  background-color: rgba(0,0,0,.05);
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,.05);
+  color: $off-black;
+  cursor: pointer;
+}

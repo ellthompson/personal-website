@@ -1,0 +1,18 @@
+.band {
+  width: 100%;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.heading-band {
+  @extend .band;
+  position: fixed;
+  transition: transform 500ms;
+}
+
+.heading-bar {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}

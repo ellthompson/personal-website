@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: MontserratBold;
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+@font-face {
+  font-family: SourceSerifPro;
+  src: url('/fonts/SourceSerifPro/SourceSerifPro-Regular.ttf');
+}
+@font-face {
+  font-family: SourceSerifProBold;
+  src: url('/fonts/SourceSerifPro/SourceSerifPro-Bold.ttf');
+}
+
+.heading {
+  font-family: 'MontserratBold';
+}
+
+h1, h2, h3 ,h4 {
+  margin: 0.67em 0;
+}
+
+.heading4, h4 {
+  @extend .heading;
+  font-size: 20px;
+}
+
+.heading3, h3 {
+  @extend .heading;
+  font-size: 24px;
+}
+
+.heading2, h2 {
+  @extend .heading;
+  font-size: 28px;
+}
+
+.heading1, h1 {
+  @extend .heading;
+  font-size: 32px;
+}
+
+.title {
+  @extend .heading;
+  font-size: 50px;
+}
+
+.heading-annotation {
+  @extend .heading;
+  font-size: 14px;
+
+  &.-faint {
+    color: #777777;
+  }
+}
+
+.copy, p{
+  font-family: 'SourceSerifPro';
+  font-size: 16px;
+  line-height: 1.5;
+
+  &.-lead {
+    font-size: 18px;
+  }
+
+  &.-under {
+    font-size: 14px;
+  }
+
+  &.-faint {
+    color: #777777;
+  }
+}

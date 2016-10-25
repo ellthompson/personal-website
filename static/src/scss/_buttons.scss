@@ -1,0 +1,22 @@
+.button__clear {
+  @extend .heading4;
+  color: white;
+  transition: font-size 200ms, opacity 200ms;
+}
+
+.button__clear.-dark {
+  color: black;
+}
+
+.button__clear.-active {
+  @extend .heading2;
+}
+
+.button__clear:hover {
+  opacity: 0.5;
+}
+
+.button__clear.-active {
+  @extend .heading2;
+  opacity: 1;
+}

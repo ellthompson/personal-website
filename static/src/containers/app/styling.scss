@@ -1,0 +1,19 @@
+.app {
+}
+
+.main-body {
+  padding-top: 60px;
+  min-height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.heading-band.headroom--unpinned {
+  transform: translateY(-60px);
+}
