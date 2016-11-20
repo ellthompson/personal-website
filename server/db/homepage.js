@@ -3,10 +3,16 @@ module.exports = function(mongoose, callback) {
         collection.find({}).toArray(function(err, docs) {
             if (err) {
                 console.log(err);
+                callback(500);
             } else {
-                var homepageDocument = docs[0];
-                var homepage = mapHomepageDocument(homepageDocument);
-                callback(homepage);
+                try {
+                    var homepageDocument = docs[0];
+                    var homepage = mapHomepageDocument(homepageDocument);
+                    callback(homepage);
+                } catch (e){
+                    console.log(e);
+                    callback(500);
+                }
             }
         });
     });

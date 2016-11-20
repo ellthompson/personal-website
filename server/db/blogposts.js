@@ -5,17 +5,22 @@ module.exports = function(mongoose, callback) {
         collection.find({}).toArray(function(err, docs) {
             if (err) {
                 console.log(err);
+                callback(500);
             } else {
-                // format every blog post so that only the necessary info is returned
-                var blogposts = _.reduce(
-                    docs,
-                    (result, value) => {
-                        result.push(formatBlogpost(value));
-                        return result;
-                    },
-                    []
-                );
-                callback(blogposts);
+                try {
+                    var blogposts = _.reduce(
+                        docs,
+                        (result, value) => {
+                            result.push(formatBlogpost(value));
+                            return result;
+                        },
+                        []
+                    );
+                    callback(blogposts);
+                } catch (e){
+                    console.log(e);
+                    callback(500);
+                }
             }
         });
     });
