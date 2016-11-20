@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import './styling.scss';
 
@@ -6,6 +7,10 @@ const Footer = ({}) => (
     <div className="footer-band">
         <div className="footer-bar wrapper">
             <div className="footer-nav nav">
+                <Link
+                    to="/"
+                    className="button__clear nav__item heading4"
+                >Home</Link>
                 <a
                     href="https://github.com/ellt92"
                     target="_blank"

@@ -1,3 +1,5 @@
+import { createContentMarkup } from 'helpers.js';
+
 const defaultHomepage = {
     isFetching: true,
     didInvalidate: false,
@@ -7,9 +9,11 @@ const defaultHomepage = {
 export default function homepage(state = defaultHomepage, action) {
     switch(action.type) {
         case 'SET_HOMEPAGE':
+            const homepage = action.homepage;
+            homepage.content
             return {
                 ...state,
-                ...action.homepage,
+                content: createContentMarkup(action.homepage.content),
                 isFetching: false,
                 didInvalidate: false,
                 lastUpdated: Date.now()
