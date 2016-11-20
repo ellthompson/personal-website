@@ -12,10 +12,6 @@ app.use('/static/', express.static('static/dist'));
 app.use('/fonts/', express.static('static/fonts'));
 app.use('/', express.static('static'));
 
-app.get('/admin', function (req, res) {
-    res.redirect(301, 'http://0.0.0.0:3000');
-});
-
 app.get('/', function (req, res) {
     res.render('index');
 });
@@ -38,6 +34,6 @@ app.get('/projects', function (req, res) {
 
 require('./api/index.js')(app, db);
 
-http.listen(3001, function(){
-    console.log('Listening on *:3001');
+http.listen(3000, function(){
+    console.log('Listening on *:3000');
 });
