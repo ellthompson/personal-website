@@ -21,7 +21,6 @@ module.exports = function(mongoose, callback) {
 function mapHomepageDocument(homepageDocument) {
     return {
         heading: homepageDocument.headingTitle,
-        backgroundImage: homepageDocument.backgroundImage.url,
         content: homepageDocument.content
     };
 }
