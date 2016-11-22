@@ -9,6 +9,5 @@ RUN apt-get -y install nodejs
 RUN mkdir personal-website
 ADD . personal-website
 WORKDIR personal-website
-RUN node_modules/.bin/webpack
+RUN npm run prod-build
 EXPOSE 3000
-CMD npm start
